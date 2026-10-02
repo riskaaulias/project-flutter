@@ -13,6 +13,7 @@ import 'sized_expanded_stack/LayoutDua.dart';
 import 'sized_expanded_stack/LayoutTiga.dart';
 import 'sized_expanded_stack/LayoutEmpat.dart';
 import 'sized_expanded_stack/LatihanTiga.dart';
+import 'sized_expanded_stack/LatihanEmpat.dart';
 
 
 void main() {
@@ -27,12 +28,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("FlutterApp"),
-          backgroundColor: const Color.fromARGB(255, 255, 106, 106),
-          centerTitle: true,
-        ),
-     body: LatihanTiga(),
+        // appBar: AppBar(
+        //   title: Text("FlutterApp"),
+        //   backgroundColor: const Color.fromARGB(255, 255, 137, 137),
+        //   centerTitle: true,
+        // ),
+     body: LatihanEmpat(),
       ),
     );
   }
