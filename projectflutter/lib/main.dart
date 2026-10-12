@@ -14,6 +14,9 @@ import 'sized_expanded_stack/LayoutTiga.dart';
 import 'sized_expanded_stack/LayoutEmpat.dart';
 import 'sized_expanded_stack/LatihanTiga.dart';
 import 'sized_expanded_stack/LatihanEmpat.dart';
+import 'list_grid_view/ArticleListScreen.dart';
+import 'list_grid_view/GridProductPage.dart';
+import 'list_grid_view/ArticleDetailScreen.dart';
 
 
 void main() {
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
         //   backgroundColor: const Color.fromARGB(255, 255, 137, 137),
         //   centerTitle: true,
         // ),
-     body: LatihanEmpat(),
+     body: ArticleListScreen(),
       ),
     );
   }
