@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class KartuProfil extends StatelessWidget {
-  const KartuProfil({super.key});
+class LayoutSatu extends StatelessWidget {
+  const LayoutSatu({super.key});
 
   @override
   Widget build(BuildContext context) {
