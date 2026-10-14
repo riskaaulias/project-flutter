@@ -3,6 +3,7 @@ import 'package:projectflutter/container/ContainerSatu.dart';
 import 'package:projectflutter/list_grid_view/ArticleListScreen.dart';
 import 'package:projectflutter/list_grid_view/GridProductPage.dart';
 import 'package:projectflutter/pages/about_page.dart';
+import 'package:projectflutter/pages/form_page.dart';
 import 'package:projectflutter/pages/home_page.dart';
 import 'package:projectflutter/row_column/ColumnWidget.dart';
 import 'package:projectflutter/row_column/LatihanColumnWidget1.dart';
@@ -37,7 +38,7 @@ class AppRoutes {
   static const layoutEmpat = '/layout-empat';
   static const sizedBox = '/sized-box-widget';
   static const stackWidget = '/stack-widget';
-  static const navigator = '/navigator';
+  static const formPage = '/form';
 
 
   static Map<String, WidgetBuilder> routes = {
@@ -58,6 +59,6 @@ class AppRoutes {
     layoutTiga: (context) => LayoutTiga(),
     sizedBox: (context) => SizedBoxWidget(),
     stackWidget: (context) => Stackwidget(),
-    navigator: (context) => Navigator(),
+    formPage: (context) => FormPage(),
   };
 }
