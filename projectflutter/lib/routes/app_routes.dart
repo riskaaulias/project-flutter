@@ -5,6 +5,7 @@ import 'package:projectflutter/list_grid_view/GridProductPage.dart';
 import 'package:projectflutter/pages/about_page.dart';
 import 'package:projectflutter/pages/form_page.dart';
 import 'package:projectflutter/pages/home_page.dart';
+import 'package:projectflutter/pages/input-form.dart';
 import 'package:projectflutter/row_column/ColumnWidget.dart';
 import 'package:projectflutter/row_column/LatihanColumnWidget1.dart';
 import 'package:projectflutter/row_column/RowColumnWidget.dart';
@@ -39,6 +40,8 @@ class AppRoutes {
   static const sizedBox = '/sized-box-widget';
   static const stackWidget = '/stack-widget';
   static const formPage = '/form';
+  static const inputForm = '/input-form';
+
 
 
   static Map<String, WidgetBuilder> routes = {
@@ -60,5 +63,6 @@ class AppRoutes {
     sizedBox: (context) => SizedBoxWidget(),
     stackWidget: (context) => Stackwidget(),
     formPage: (context) => FormPage(),
+    inputForm: (context) => BelajarForm(),
   };
 }
