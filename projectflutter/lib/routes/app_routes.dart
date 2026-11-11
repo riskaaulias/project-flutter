@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projectflutter/bioskop/MovieDetailScreen.dart';
+import 'package:projectflutter/bioskop/MovieListScreen.dart';
+import 'package:projectflutter/bioskop/ReceiptScreen.dart';
 import 'package:projectflutter/container/ContainerSatu.dart';
 import 'package:projectflutter/list_grid_view/ArticleListScreen.dart';
 import 'package:projectflutter/list_grid_view/GridProductPage.dart';
@@ -6,6 +9,7 @@ import 'package:projectflutter/pages/about_page.dart';
 import 'package:projectflutter/pages/form_page.dart';
 import 'package:projectflutter/pages/home_page.dart';
 import 'package:projectflutter/pages/input-form.dart';
+import 'package:projectflutter/pages/tugas_input-form.dart';
 import 'package:projectflutter/row_column/ColumnWidget.dart';
 import 'package:projectflutter/row_column/LatihanColumnWidget1.dart';
 import 'package:projectflutter/row_column/RowColumnWidget.dart';
@@ -41,7 +45,10 @@ class AppRoutes {
   static const stackWidget = '/stack-widget';
   static const formPage = '/form';
   static const inputForm = '/input-form';
-
+  static const tugasInputForm = '/tugas-input-form';
+  static const detailScreen = '/detail-screen';
+  static const listScreen = '/list-screen';
+  static const receiptScreen = '/receipt-screen';
 
 
   static Map<String, WidgetBuilder> routes = {
@@ -64,5 +71,9 @@ class AppRoutes {
     stackWidget: (context) => Stackwidget(),
     formPage: (context) => FormPage(),
     inputForm: (context) => BelajarForm(),
+    tugasInputForm: (context) => TugasBelajarForm(),
+    detailScreen: (context) => MovieDetailScreen(),
+    listScreen: (context) => MovieListScreen(),
+    receiptScreen: (context) => ReceiptScreen(),
   };
 }
