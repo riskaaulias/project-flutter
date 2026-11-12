@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import '../routes/app_routes.dart';
 
 class MovieListScreen extends StatelessWidget {
   const MovieListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List> movies = [
+    final List movies = [
       {
         'title': 'Ramayana: Rise of Legend',
         'genre': 'Action / Epic',
@@ -39,7 +40,7 @@ class MovieListScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
       appBar: AppBar(
-        title: const Text('TIX ID - Cinemas'),
+        title: const Text('BlitzTix - Cinemas'), // Nama sudah diubah ke BlitzTix
         backgroundColor: const Color(0xFF0A192F),
         foregroundColor: Colors.white,
       ),
@@ -60,10 +61,10 @@ class MovieListScreen extends StatelessWidget {
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                  childAspectRatio: 0.55,
+                  crossAxisCount: 4, // 4 kolom agar ukuran poster sedang dan pas di layar web
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                  childAspectRatio: 0.65,
                 ),
                 itemCount: movies.length,
                 itemBuilder: (context, index) {
@@ -72,7 +73,7 @@ class MovieListScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.pushNamed(
                         context,
-                        AppRoutes.detailScreen, // Menggunakan konstanta rute
+                        AppRoutes.detailScreen,
                         arguments: movie,
                       );
                     },
@@ -107,7 +108,7 @@ class MovieListScreen extends StatelessWidget {
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 13,
+                                    fontSize: 12,
                                     color: Color(0xFF0A192F),
                                   ),
                                 ),
@@ -123,7 +124,7 @@ class MovieListScreen extends StatelessWidget {
                                 const SizedBox(height: 6),
                                 SizedBox(
                                   width: double.infinity,
-                                  height: 28,
+                                  height: 26,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: const Color(0xFF0A192F),
@@ -139,7 +140,7 @@ class MovieListScreen extends StatelessWidget {
                                     },
                                     child: const Text(
                                       'Pesan',
-                                      style: TextStyle(fontSize: 11),
+                                      style: TextStyle(fontSize: 10),
                                     ),
                                   ),
                                 ),

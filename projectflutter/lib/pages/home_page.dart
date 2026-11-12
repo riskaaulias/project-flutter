@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
-                    // --- TOMBOL MENU BIOSKOP (Disesuaikan ke /list-screen) ---
+                    
                     _buildButterButton(
                       context, 
                       'Bioskop List (Tugas)', 
@@ -163,6 +163,12 @@ class HomePage extends StatelessWidget {
                       context, 
                       'Tugas Input Form', 
                       () => Navigator.pushNamed(context, '/tugas-input-form'),
+                    ),
+                    const SizedBox(height: 12),
+                    _buildButterButton(
+                      context, 
+                      'Post Page', 
+                      () => Navigator.pushNamed(context, '/post-page'),
                     ),
                     const SizedBox(height: 20),
                   ],

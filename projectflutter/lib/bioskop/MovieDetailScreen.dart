@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../routes/app_routes.dart'; // Sesuaikan path import app_routes jika perlu
 
 class MovieDetailScreen extends StatefulWidget {
   const MovieDetailScreen({super.key});
@@ -12,7 +13,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
   String paymentMethod = 'Cash';
   final TextEditingController cashController = TextEditingController();
 
-@override
+  @override
   Widget build(BuildContext context) {
     final movie = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     int totalPrice = (movie['price'] as int) * ticketCount;
@@ -33,7 +34,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
             Text('Durasi: ${movie['duration']}', style: const TextStyle(color: Colors.black54, fontSize: 14)),
             const Divider(height: 30),
 
-            // Pengaturan Multi Items (Jumlah Tiket)
+            // Pengaturan Jumlah Tiket
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -140,7 +141,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
 
                   Navigator.pushReplacementNamed(
                     context,
-                    '/receipt',
+                    AppRoutes.receiptScreen,
                     arguments: {
                       'title': movie['title'],
                       'tickets': ticketCount,

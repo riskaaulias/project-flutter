@@ -9,6 +9,7 @@ import 'package:projectflutter/pages/about_page.dart';
 import 'package:projectflutter/pages/form_page.dart';
 import 'package:projectflutter/pages/home_page.dart';
 import 'package:projectflutter/pages/input-form.dart';
+import 'package:projectflutter/pages/post_page.dart';
 import 'package:projectflutter/pages/tugas_input-form.dart';
 import 'package:projectflutter/row_column/ColumnWidget.dart';
 import 'package:projectflutter/row_column/LatihanColumnWidget1.dart';
@@ -49,6 +50,7 @@ class AppRoutes {
   static const detailScreen = '/detail-screen';
   static const listScreen = '/list-screen';
   static const receiptScreen = '/receipt-screen';
+  static const postPage = '/post-page';
 
 
   static Map<String, WidgetBuilder> routes = {
@@ -75,5 +77,6 @@ class AppRoutes {
     detailScreen: (context) => MovieDetailScreen(),
     listScreen: (context) => MovieListScreen(),
     receiptScreen: (context) => ReceiptScreen(),
+    postPage: (context) => PostPage(),
   };
 }

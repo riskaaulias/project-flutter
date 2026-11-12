@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../routes/app_routes.dart'; // Pastikan path import app_routes sudah benar
 
 class ReceiptScreen extends StatelessWidget {
   const ReceiptScreen({super.key});
@@ -54,10 +55,9 @@ class ReceiptScreen extends StatelessWidget {
                         foregroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        // Kembali ke halaman paling awal (Movie List)
                         Navigator.pushNamedAndRemoveUntil(
                           context,
-                          '/movie-list',
+                          AppRoutes.listScreen,
                           (route) => false,
                         );
                       },
