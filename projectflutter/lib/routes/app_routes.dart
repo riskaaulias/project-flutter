@@ -9,7 +9,9 @@ import 'package:projectflutter/pages/about_page.dart';
 import 'package:projectflutter/pages/form_page.dart';
 import 'package:projectflutter/pages/home_page.dart';
 import 'package:projectflutter/pages/input-form.dart';
+import 'package:projectflutter/pages/login_page.dart';
 import 'package:projectflutter/pages/post_page.dart';
+import 'package:projectflutter/pages/register_page.dart';
 import 'package:projectflutter/pages/tugas_input-form.dart';
 import 'package:projectflutter/row_column/ColumnWidget.dart';
 import 'package:projectflutter/row_column/LatihanColumnWidget1.dart';
@@ -51,6 +53,9 @@ class AppRoutes {
   static const listScreen = '/list-screen';
   static const receiptScreen = '/receipt-screen';
   static const postPage = '/post-page';
+  static const login = '/login';
+  static const register = '/register';
+
 
 
   static Map<String, WidgetBuilder> routes = {
@@ -78,5 +83,27 @@ class AppRoutes {
     listScreen: (context) => MovieListScreen(),
     receiptScreen: (context) => ReceiptScreen(),
     postPage: (context) => PostPage(),
+    login: (context) => LoginPage(),
+    register: (context) => RegisterPage(),
   };
+
+          static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case home:
+        return MaterialPageRoute(builder: (_) => const HomePage());
+      case login:
+        return MaterialPageRoute(builder: (_) => const LoginPage());
+      default:
+        // Halaman fallback jika rute tidak ditemukan
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            body: Center(
+              child: Text('Rute tidak ditemukan: ${settings.name}'),
+            ),
+          ),
+        );
+    }
+  }
 }
+
+  
